@@ -26,4 +26,6 @@ ogr2ogr -nlt Polygon \
         $tempdir/sentinel2_grid.shp \
         $tempdir/sentinel2_grid.kml
 
-tar czvf sentinel2_grid.tar.gz $tempdir/sentinel2_grid.{dbf,prj,shp,shx}
+tar -czv -C $tempdir -f sentinel2_grid.tar.gz sentinel2_grid.{dbf,prj,shp,shx}
+
+rm $tempdir -r
